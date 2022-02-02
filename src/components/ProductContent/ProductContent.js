@@ -26,6 +26,7 @@ function ProductContent({ product }) {
             discountRate={product.discountRate}
             priceDiscount={product.priceDiscount}
             priceOriginal={product.priceOriginal}
+            outside={product.outside}
           />
         </ClosedTagWrapper>
       )}

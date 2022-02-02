@@ -7,6 +7,7 @@ function ToolTip({
   discountRate,
   priceDiscount,
   priceOriginal,
+  outside,
 }) {
   return (
     <Tooltip>
@@ -14,20 +15,20 @@ function ToolTip({
       <TooltipDesc>
         <TooltipDescName>{productName}</TooltipDescName>
         <TooltipDescPrice>
-          {discountRate ? (
+          {outside ? (
             <>
-              <TooltipDescPriceDiscountRate>
-                {discountRate}%
-              </TooltipDescPriceDiscountRate>
+              <TooltipDescPriceLabel>예상가</TooltipDescPriceLabel>
               <TooltipDescPriceDiscount>
                 {priceDiscount}
               </TooltipDescPriceDiscount>
             </>
           ) : (
             <>
-              <TooltipDescPriceLabel>예상가</TooltipDescPriceLabel>
+              <TooltipDescPriceDiscountRate>
+                {discountRate}%
+              </TooltipDescPriceDiscountRate>
               <TooltipDescPriceDiscount>
-                {priceOriginal}
+                {priceDiscount}
               </TooltipDescPriceDiscount>
             </>
           )}
