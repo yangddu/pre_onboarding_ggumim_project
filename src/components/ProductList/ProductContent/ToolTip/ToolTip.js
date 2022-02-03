@@ -1,4 +1,5 @@
 import React from 'react';
+import numberWithCommas from '../../../../utils/numberWithCommas';
 import styled from 'styled-components';
 
 function ToolTip({
@@ -6,11 +7,11 @@ function ToolTip({
   productName,
   discountRate,
   priceDiscount,
-  priceOriginal,
   outside,
+  IsShownBox,
 }) {
   return (
-    <Tooltip>
+    <Tooltip IsShownBox={IsShownBox}>
       <TooltipImage src={imageUrl} />
       <TooltipDesc>
         <TooltipDescName>{productName}</TooltipDescName>
@@ -19,7 +20,7 @@ function ToolTip({
             <>
               <TooltipDescPriceLabel>예상가</TooltipDescPriceLabel>
               <TooltipDescPriceDiscount>
-                {priceDiscount}
+                {numberWithCommas(priceDiscount)}
               </TooltipDescPriceDiscount>
             </>
           ) : (
@@ -28,7 +29,7 @@ function ToolTip({
                 {discountRate}%
               </TooltipDescPriceDiscountRate>
               <TooltipDescPriceDiscount>
-                {priceDiscount}
+                {numberWithCommas(priceDiscount)}
               </TooltipDescPriceDiscount>
             </>
           )}
@@ -48,8 +49,8 @@ function ToolTip({
 export default ToolTip;
 
 const Tooltip = styled.div`
+  display: ${props => props.IsShownBox && props.IsShownBox};
   z-index: 1000;
-  display: flex;
   align-items: center;
   position: absolute;
   top: 28px;

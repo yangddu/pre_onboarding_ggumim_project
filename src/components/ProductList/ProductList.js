@@ -1,11 +1,16 @@
 import React from 'react';
-import ProductContent from '../ProductContent/ProductContent';
+import ProductContent from './ProductContent/ProductContent';
 
-function ProductList({ productList }) {
+function ProductList({ productList, selectedProduct, handleSelect }) {
   return (
     <>
       {productList?.map(product => (
-        <ProductContent key={product.productId} product={product} />
+        <ProductContent
+          handleSelect={handleSelect}
+          selectedProduct={selectedProduct}
+          key={product.productId}
+          product={product}
+        />
       ))}
     </>
   );
