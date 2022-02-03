@@ -38,8 +38,8 @@ export default ProductContent;
 
 const ProductTag = styled.div`
   position: absolute;
-  top: ${props => props.pointY}px;
-  left: ${props => props.pointX}px;
+  left: ${props => props.pointY * 1.6}px;
+  top: ${props => props.pointX * 1.6}px;
   width: 32px;
   height: 32px;
   cursor: pointer;
