@@ -1,4 +1,4 @@
-<h1>원티드 프리온보딩 코스 1주차 과제</h1>
+<h1>원티드 프리온보딩 코스 개인 과제</h1>
 
 ## 배포
 
@@ -16,7 +16,7 @@
 
 1. git clone
    ```bash
-   git clone
+   git clone https://github.com/yangddu/pre_onboarding_ggumim_project.git
    ```
 2. 패키지 설치
    ```bash
