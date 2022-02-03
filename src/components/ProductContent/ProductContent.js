@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
 import ToolTip from '../ToolTip/ToolTip';
+import styled from 'styled-components';
 
 function ProductContent({ product }) {
   const [isClicked, setIsClicked] = useState(false);

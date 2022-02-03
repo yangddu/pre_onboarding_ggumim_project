@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import ProductList from '../../components/ProductList/ProductList';
-import ProductSlider from '../../components/ProductSlider/ProductSlider';
+import ProductSliderContent from '../../components/ProductSliderContent/ProductSliderContent';
 
 function ContentsDetail() {
   const [imageData, setImageData] = useState([]);
@@ -17,7 +17,7 @@ function ContentsDetail() {
         <ViewImg src={imageData.imageUrl} alt="디테일 이미지" />
         <ProductList productList={imageData.productList} />
         <ProductSliderWrap>
-          <ProductSlider />
+          <ProductSliderContent productList={imageData.productList} />
         </ProductSliderWrap>
       </ContentsCenter>
     </ContentsDetailWrpper>
@@ -32,6 +32,7 @@ const ContentsCenter = styled.div`
   margin: 0 auto;
   width: 800px;
   position: relative;
+  overflow: hidden;
 `;
 
 const ViewImg = styled.img``;
@@ -39,6 +40,4 @@ const ViewImg = styled.img``;
 const ProductSliderWrap = styled.div`
   display: flex;
   align-items: center;
-  overflow-y: hidden;
-  overflow-x: auto;
 `;

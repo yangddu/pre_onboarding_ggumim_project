@@ -1,33 +1,22 @@
-import React, { useRef, useState } from 'react';
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import styled from 'styled-components';
+import { useState, useRef } from 'react';
 
-// Import Swiper styles
-// import 'swiper/css';
-
-// import './styles.css';
-
-export default function App() {
+function ProductSlider({ product }) {
   return (
     <>
-      <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
-        pagination={{
-          clickable: true,
-        }}
-        className="mySwiper"
-      >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
-      </Swiper>
+      <Img src={product.imageUrl} alt="매거진상세_사진아이템" />
     </>
   );
 }
+
+export default ProductSlider;
+
+const Img = styled.img`
+  position: relative;
+  width: 106px;
+  height: 106px;
+  border-radius: 16px;
+  border: 0.5px solid #aaafb9;
+  user-select: none;
+  cursor: pointer;
+`;
