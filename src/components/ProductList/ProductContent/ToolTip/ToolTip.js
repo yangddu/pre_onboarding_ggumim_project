@@ -54,7 +54,7 @@ const Tooltip = styled.div`
   align-items: center;
   position: absolute;
   top: 28px;
-  left: -20px;
+  left: -136px;
   background-color: rgba(255, 255, 255, 0.95);
   width: 220px;
   height: 86px;
@@ -70,7 +70,7 @@ const Tooltip = styled.div`
     content: '';
     position: absolute;
     top: -8px;
-    left: 34px;
+    right: 61px;
     width: 12px;
     height: 8px;
     background-image: url('http://cdn.ggumim.co.kr/storage/20211118152728RO3OXnhkrC.png');
