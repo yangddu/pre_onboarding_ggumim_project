@@ -2,7 +2,7 @@
 
 ## 배포
 
-🔗 **과제물**(aws s3): https://
+🔗 **과제물**(aws s3): http://home-ggumim.s3-website.ap-northeast-2.amazonaws.com/
 
 <br>
 
