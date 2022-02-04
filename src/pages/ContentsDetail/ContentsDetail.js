@@ -21,11 +21,7 @@ function ContentsDetail() {
   return (
     <ContentsDetailWrpper>
       <ContentsCenter>
-        <ViewImg
-          onClick={() => handleSelect(0)}
-          src={imageData.imageUrl}
-          alt="디테일 이미지"
-        />
+        <ViewImg src={imageData.imageUrl} alt="디테일 이미지" />
         <ProductList
           handleSelect={handleSelect}
           selectedProduct={selectedProduct}
